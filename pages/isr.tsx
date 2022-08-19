@@ -29,7 +29,7 @@ const Isr: NextPage<StaticProps> = ({ tasks, notices }) => {
   const router = useRouter()
   return (
     <Layout title="ISR">
-      <p className="mb-3 text-blue-500">ISR</p>
+      <p className="mb-3 text-indigo-500">ISR</p>
       <ul className="mb-3">
         {tasks?.map((task) => {
           return (
