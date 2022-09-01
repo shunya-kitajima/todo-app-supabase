@@ -8,9 +8,7 @@ export const useQueryTasks = () => {
       .from('todos')
       .select('*')
       .order('created_at', { ascending: true })
-    if (error) {
-      throw new Error(error.message)
-    }
+    if (error) throw new Error(error.message)
     return data
   }
   return useQuery<Task[], Error>({

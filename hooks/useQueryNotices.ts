@@ -8,9 +8,7 @@ export const useQueryNotices = () => {
       .from('notices')
       .select('*')
       .order('created_at', { ascending: true })
-    if (error) {
-      throw new Error(`${error.message}: ${error.details}`)
-    }
+    if (error) throw new Error(`${error.message}: ${error.details}`)
     return data
   }
   return useQuery<Notice[], Error>({
