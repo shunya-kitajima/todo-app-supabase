@@ -9,13 +9,14 @@ export const useQueryNotices = () => {
       .select('*')
       .order('created_at', { ascending: true })
     if (error) {
-      throw new Error(error.message)
+      throw new Error(`${error.message}: ${error.details}`)
     }
     return data
   }
   return useQuery<Notice[], Error>({
     queryKey: ['notices'],
     queryFn: getNotices,
-    staleTime: Infinity,
+    staleTime: 0,
+    refetchOnWindowFocus: true,
   })
 }
