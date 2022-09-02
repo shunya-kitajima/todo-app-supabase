@@ -67,7 +67,7 @@ export const useMutateNotice = () => {
       return data
     },
     {
-      onSuccess: (res, variables) => {
+      onSuccess: (_, variables) => {
         const previousNotices = queryClient.getQueryData<Notice[]>(['notices'])
         if (previousNotices) {
           queryClient.setQueryData<Notice[]>(
