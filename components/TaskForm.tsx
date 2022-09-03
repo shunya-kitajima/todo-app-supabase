@@ -23,7 +23,7 @@ export const TaskForm: React.FC = () => {
   }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <input
         type="text"
         className="my-2 rounded border border-gray-300 px-3 py-2 text-sm placeholder-gray-500 focus:border-indigo-500 focus:outline-none"
