@@ -12,7 +12,12 @@ export const NoticeList: React.FC = () => {
   return (
     <div className="my-2">
       {notices?.map((notice) => (
-        <NoticeItem key={notice.id} id={notice.id} content={notice.content} />
+        <NoticeItem
+          key={notice.id}
+          id={notice.id}
+          content={notice.content}
+          user_id={notice.user_id}
+        />
       ))}
     </div>
   )
