@@ -31,7 +31,10 @@ export const NoticeForm: React.FC = () => {
         value={editedNotice.content}
         onChange={(e) => update({ ...editedNotice, content: e.target.value })}
       />
-      <button className="ml-2 rounded bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700">
+      <button
+        type="submit"
+        className="ml-2 rounded bg-indigo-600 px-3 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+      >
         {editedNotice.id ? 'Update' : 'Create'}
       </button>
     </form>
