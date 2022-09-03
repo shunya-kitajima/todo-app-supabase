@@ -4,7 +4,7 @@ import useStore from '../store'
 import { useMutateTask } from '../hooks/useMutateTask'
 import { Task } from '../types/types'
 
-export const TaskItem: React.FC<Omit<Task, 'create_at' | 'user_id'>> = ({
+export const TaskItem: React.FC<Omit<Task, 'created_at' | 'user_id'>> = ({
   id,
   title,
 }) => {
