@@ -1,5 +1,5 @@
 import React from 'react'
-import { PencilIcon, TrashIcon } from '@heroicons/react/solid'
+import { PencilAltIcon, TrashIcon } from '@heroicons/react/solid'
 import useStore from '../store'
 import { useMutateTask } from '../hooks/useMutateTask'
 import { Task } from '../types/types'
@@ -15,7 +15,7 @@ export const TaskItem: React.FC<Omit<Task, 'created_at' | 'user_id'>> = ({
     <li className="my-3 text-lg font-extrabold">
       <span>{title}</span>
       <div className="float-right ml-20 flex">
-        <PencilIcon
+        <PencilAltIcon
           className="mx-1 h-5 w-5 cursor-pointer text-blue-500"
           onClick={() => {
             update({
