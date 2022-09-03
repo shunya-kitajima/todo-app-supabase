@@ -10,7 +10,7 @@ export const NoticeList: React.FC = () => {
   if (status === 'error') return <p>{'Error'}</p>
 
   return (
-    <div className="my-2">
+    <ul className="my-2">
       {notices?.map((notice) => (
         <NoticeItem
           key={notice.id}
@@ -19,6 +19,6 @@ export const NoticeList: React.FC = () => {
           user_id={notice.user_id}
         />
       ))}
-    </div>
+    </ul>
   )
 }
